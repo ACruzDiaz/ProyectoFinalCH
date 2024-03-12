@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{  
+    font-size: 100%;
+    text-decoration: none;
+    border: 0;
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    background-color: #171717;
+    font-family: "Nunito Sans", sans-serif;
+    color: #EDEDED;
+}
+
+
+
+/* ESTILOS COLORES Y FUENTES  */
+/* Titulos h1 */
+
+h1{
+
+    font-size: 5.625rem;
+    font-weight: 1000;
+    line-height: 5.625rem;
+    font-style: oblique;
+    
+}
+
+h2 {
+    font-size: 3.75rem;
+    font-weight: 1000;
+    line-height: 3.75rem;
+    font-style: oblique;
+}
+h3{
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 3.75rem;
+    font-style:  oblique;
+}
+p,label{
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    font-style:  normal;
+}
+
+
+.contenedorBackground{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    
+}
+.contenedorPortada{
+
+    height: 100%;
+    background-image: linear-gradient(rgba(5,7,12,0.08), rgba(5,7,12,0.75)) ,url("../assets/img/portada.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+
+    padding: 7.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.contenedorPortada div{
+    align-self: flex-end;
+    height: 25%;
+
+}
+.contenedorPortada div div{
+    position: relative;
+    border-top: 0.4rem double #a81516;
+    border-left: 0.4rem double #a81516;
+    border-bottom: 0.4rem double #a81516;
+    height: 12rem;
+    width: 21.5rem;
+    top: -10.5rem;
+    left: -1rem;
+} 
+
+
+
+
+
+/* Barra de navegacion */
+nav ul{
+    height: 90px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 3fr;
+    grid-template-rows: none;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+
+}
+/* Elementos de la lista de la barra de navegacion */
+nav ul li a{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #EDEDED;
+    &:visited, &:focus { color:#EDEDED; }
+    &:hover, &:active {color:#DA0037;}
+
+    
+}
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    height: 50px;
+    &:last-child{
+        justify-self: end;
+        margin-right: 4vw;
+        a{
+            &:hover, &:active {color:white;}  
+        }
+    }
+}
+
+nav ul li a img, footer img {
+        height: 90px;
+}
+
+.botonCitas{
+    padding: 20px 10px;
+    background-color:#a81516 ;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+
+}
+
+
+.changeColor{
+    filter: invert(1);
+    height: 200px;
+}
+
+/* Footer section */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.conocenosBackground{
+    background-image:linear-gradient(rgba(5,7,12,0.08), rgba(5,7,12,0.75)) , url("../assets/img/equipo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50dvh;
+    text-align: center;
+}
+
+
+}
+
+main section article{
+    width: 500px;
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+    margin: 16px;
+
+    h2{
+        text-align: center;
+        margin: 1rem;
+    }
+    p{
+        text-align: left;
+    }
+    
+    
+}
+
+
+
+.tiendaBox div img {
+    width: 500px;
+}
+
+.imageBox {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+
+    div{
+        height: 100%;
+        width: 25%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div h2{
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+}
+
+
+
+.serviciosMain{
+    padding: 6rem 4rem;
+    text-align: center;
+    background-color: black;
+}
+
+.nuestrosServicios {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,auto);
+    padding-top: 3rem;
+
+
+}
+
+.nuestrosServicios div{
+    grid-column: span 2;
+    width: auto;
+    text-align: center;
+    padding: 1rem;
+    /* margin: 16px; */
+}
+
+.nuestrosServicios .nuestrosServiciosOdds{
+    grid-column: -6/-4;
+
+}
+
+
+
+
+.seccion2Background{
+
+    background-image: url("../assets/img/nuestroCompromiso.jpg");
+    background-repeat: no-repeat;
+    background-position: -400px -350px;
+    background-size: cover;
+    
+    min-height: 50dvh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.seccion2Background h2{
+    justify-self: self-start;
+    text-align: left;
+    width: 50%;
+    margin-left: 2rem;
+}
+
+.seccion2Background div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(5,7,12,0.5);
+    padding: 1rem 2rem;
+}
+
+.seccion2Background div h3{
+    width: 66%;
+}
+
+.seccion2Background div h3, p{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+.seccionAgendar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 2rem 2rem;
+    
+}
+
+.seccionAgendar h2{
+    width: 40%;
+}
+
+/* .seccionAgendar form{
+    justify-self: center;
+} */
+
+.citasBox{
+    justify-self: self-end;
+    border-radius: 30px 0px 0px 30px;
+    background-color: #EDEDED;
+    width: 40dvw;
+    height: 200px;
+    
+}
+.citasBox p{
+    color: #171717; 
+}
+
+
+.formularioCitas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 0rem 10rem;
+    padding: 0rem 5rem;
+    margin: 0rem 4rem;
+
+}
+
+input[type=text]{
+    border:none;
+    border-bottom:  2px solid white;
+    border-radius: 8px;
+    background-color: #171717;
+    color: white;
+    width: 50%;
+    margin: 0.5rem;
+    padding: 1rem;
+    &:focus{
+        outline: none;
+        border:none;
+        border-bottom:  2px solid rgb(94, 79, 234);
+    }
+    
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html" ><img src="../assets/img/logo.png" alt=""></a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="./tienda.html">Tienda</a></li>
+                <li><a href="./conocenos.html">Conocenos</a></li>
+                <li><a class="botonCitas" href="#">Agenda una cita</a></li>
+            </ul>
+        </nav>
+        <h1>EVITA ESPERAR Y<br>AGENDA AHORA</h1>
+    </header>
+    <body>
+        <form>
+            <!-- Datos de la persona -->
+            <h2>Informacion de contacto</h2>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" placeholder="Nombre" id="nombre" required>
+            </div>
+            
+            <div>
+                <label for="numero_tel">Telefono:</label>
+                <input type="tel" placeholder="664 222 2222" id="numero_tel"required>
+            </div>
+            
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="email" placeholder="correo@mail.com" id="correo">
+            </div>
+            
+
+
+            <!-- Datos del automovil -->
+            <h2>Informacion del auto</h2>
+            <div>
+                <label for="modelo">Modelo:</label>
+                <input type="text" placeholder="Nissan Sentra" id="modelo"required>
+            </div>
+            
+            <div>
+                <label for="cilindros">Motor:</label>
+                <select name="Cilindros" id="cilindros">
+                    <option value="4">4 Cilindros</option>
+                    <option value="6">6 Cilindros</option>
+                    <option value="8">8 Cilindros</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="year">Año:</label>
+                <input type="number" placeholder="2010" id="year" required>
+            </div>
+            
+            <div>
+                <p>Tipo de aceite</p>
+                <label> Natural
+                    <input type="radio" name="typeoil" id="" required>
+                </label>
+                <label > Sintetico
+                    <input type="radio" name="typeoil" id="" required>
+                </label>
+            </div>
+                        
+
+            <!-- Enviar datos -->
+            <input type="reset" value="Cancelar">   
+            <input type="submit" value="Agendar cita">
+            
+
+
+        </form>
+        <div class="citasBox">
+            <img src="../assets/img/Group_27.png" alt="">
+            <p>Si lo prefieres agenda por Whatsapp o llamanos al: </p>
+            <p>(664)333-3333</p>
+        </div>
+    </body>
+
+    <footer>
+        <img src="../assets/img/logo.png" alt="logo">
+        <p>Sobre nosotros</p>
+        <p>Contacto a provedores</p>
+        <p>Politica de privacidad</p>
+    </footer>
+</body>
+</html>
