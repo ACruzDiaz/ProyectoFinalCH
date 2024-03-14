@@ -99,9 +99,12 @@
                 <h2>Servicio rapido y confiable</h2>
                 <div>
                     <h3>Nuestro compromiso contigo</h3>
-                    <p>Una empresa comprometida a satisface a sus clientes. Nos respaldan mas de 3000 anos de experiencia en
-                        el ambito automotriz. Asi es, Jesucristo solia traer su auto con nostros! No lo piense mas y trae tu
-                        auto hoy mismo. Asi es, Jesucristo solia traer su auto con nostros! No lo piense mas y trae tu auto
+                    <p>Una empresa comprometida a satisface a sus clientes. Nos respaldan mas de 3000 anos de
+                        experiencia en
+                        el ambito automotriz. Asi es, Jesucristo solia traer su auto con nostros! No lo piense mas y
+                        trae tu
+                        auto hoy mismo. Asi es, Jesucristo solia traer su auto con nostros! No lo piense mas y trae tu
+                        auto
                         hoy mismo.</p>
                 </div>
 
@@ -110,76 +113,63 @@
 
         <!-- Seccion 4. Citass -->
         <section class="seccionAgendar">
-            <h2>Evita esperar y agenda ahora</h2>
+            <h2>Evita esperar y<br>agenda ahora</h2>
             <form class="formularioCitas">
+
                 <!-- Datos de la persona -->
-                <div><h3>Informacion de contacto</h3>
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" placeholder="Nombre" id="nombre" required>
-                    </div>
-    
-                    <div>
-                        <label for="numero_tel">Telefono</label>
-                        <input type="tel" placeholder="664 222 2222" id="numero_tel" required>
-                    </div>
-    
-                    <div>
-                        <label for="correo">Correo</label>
-                        <input type="email" placeholder="correo@mail.com" id="correo">
-                    </div></div>
-                
+                <div class="infoContacto">
+                    <h3>Informacion de contacto</h3>
+
+                    <label for="nombre" class="nombreLabel">Nombre</label>
+                    <input type="text" placeholder="Nombre" id="nombre" required>
+
+                    <label for="numero_tel" class="telefonoLabel">Telefono</label>
+                    <input type="tel" placeholder="664 222 2222" id="numero_tel" required>
+
+                    <label for="correo" class="correoLabel">Correo</label>
+                    <input type="email" placeholder="correo@mail.com" id="correo">
+                </div>
+
 
 
 
                 <!-- Datos del automovil -->
-                <div><h3>Informacion del auto</h3>
-                    <div>
-                        <label for="modelo">Modelo</label>
-                        <input type="text" placeholder="Nissan Sentra" id="modelo" required>
-                    </div>
-    
-                    <div>
-                        <label for="cilindros">Motor</label>
-                        <select name="Cilindros" id="cilindros">
-                            <option value="4">4 Cilindros</option>
-                            <option value="6">6 Cilindros</option>
-                            <option value="8">8 Cilindros</option>
-                        </select>
-                    </div>
-    
-                    <div>
-                        <label for="year">Año</label>
-                        <input type="number" placeholder="2010" id="year" required>
-                    </div>
-    
-                    <div>
-                        <p>Tipo de aceite</p>
-                        <label> Natural
+                <div class="infoAuto">
+                    <h3>Informacion del auto</h3>
+                    <label for="modelo" class="modeloLabel">Modelo</label>
+                    <input type="text" placeholder="Nissan Sentra" id="modelo" required>
+                    <label for="cilindros" class="motorLabel">Motor</label>
+                    <select name="Cilindros" id="cilindros">
+                        <option value="4">4 Cilindros</option>
+                        <option value="6">6 Cilindros</option>
+                        <option value="8">8 Cilindros</option>
+                    </select>
+                    <label for="year" class="yearLabel">Año</label>
+                    <input type="number" placeholder="2010" id="year" required>
+                    <p class="aceiteLabel">Aceite</p>
+                    <div class="aceiteDiv">
+                        <label class="natural"> Natural
                             <input type="radio" name="typeoil" id="" required>
                         </label>
-                        <label> Sintetico
+                        <label class="sintetico"> Sintetico
                             <input type="radio" name="typeoil" id="" required>
                         </label>
-                    </div></div>
-                
+                    </div>
+
+                </div>
+
 
 
                 <!-- Enviar datos -->
-                <div>
+                <div class="enviarDatosBotones">
                     <input type="reset" value="Cancelar">
-                <input type="submit" value="Agendar cita">
+                    <input type="submit" value="Agendar cita">
                 </div>
-                
-
-
-
             </form>
 
             <div class="citasBox">
                 <img src="./assets/img/Group_27.png" alt="">
-                <p>Si lo prefieres agenda por Whatsapp o llamanos al: </p>
-                <p>(664)333-3333</p>
+                <p>Si lo prefieres agenda por Whatsapp o llamanos al: (664)333-3333 </p>
             </div>
         </section>
 
