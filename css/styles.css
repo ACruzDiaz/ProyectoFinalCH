@@ -153,18 +153,27 @@ nav ul li a img, footer img {
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: black;
+    
+}
+footer p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
 }
 
 
 
 
-
-
-
-
-
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
 
 
 .conocenosBackground{
@@ -173,7 +182,6 @@ footer {
     background-size: cover;
     min-height: 50dvh;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,6 +195,10 @@ footer {
 .conocenosDescription {
     width: 90%;
     margin: 4rem auto;
+    & p{
+        font-size: 1.5rem;
+    }
+
 
 }
 .conocenosSection{
@@ -213,17 +225,18 @@ footer {
     width: 100%;
     min-height: 25%;
     h2{
+        padding: 1rem;
         text-align: center;
         font-size: 3.1rem;
     }
 }
 
-
-
 .conocenosSection article p{
+    
     min-height: 75%;
     text-align: justify;
     padding: 1.25rem;
+    font-size: 1.75rem;
 }
 
 
@@ -593,6 +606,56 @@ select{
     width: 50%;
     height: 2rem ;
     margin: 0.5rem;
+}
+
+
+@media (max-width: 750px) {
+
+    body header nav{
+        display: none;
+    }
+    body main div h1{
+    font-size: 3.625rem;
+    line-height: 3.825rem;
+    font-style: oblique;
+    }
+
+
+    footer {
+        flex-direction: column;
+    }
 
 }
 
+
+
+@media (max-width: 500px) {
+    .conocenosBackground h1{
+        width: 80%;
+    }
+
+    .conocenosSection article div{
+        h2{
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+    
+    .conocenosSection article p{
+        font-size: 1rem;
+        line-height: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .conocenosSection{
+        margin: 0px auto;
+        width: 96%;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
