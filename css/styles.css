@@ -23,18 +23,20 @@ body {
 /* Titulos h1 */
 
 h1{
-
+/* 
     font-size: 5.625rem;
+    line-height: 5.625rem; */
     font-weight: 1000;
-    line-height: 5.625rem;
+
     font-style: oblique;
     
 }
 
 h2 {
-    font-size: 3.75rem;
+    /* font-size: 3.75rem;
+    line-height: 3.75rem; */
     font-weight: 1000;
-    line-height: 3.75rem;
+
     font-style: oblique;
 }
 h3{
@@ -189,18 +191,20 @@ footer p{
     
 }
 .conocenosBackground h1{
-    width: 60%;
+    width: 80%;
+    font-size: clamp(3.5rem, 6vw, 7rem);
 }
 
 .conocenosDescription {
     width: 90%;
     margin: 4rem auto;
-    & p{
-        font-size: 1.5rem;
-    }
-
-
 }
+
+.conocenosDescription p{
+    font-size: clamp(1.25rem, 2vw, 1.75rem) ;
+    line-height: clamp(1.75rem, 2vw, 2.25rem) ;
+}
+
 .conocenosSection{
     display: flex;
     gap: 1.5rem;
@@ -212,7 +216,8 @@ footer p{
 }
 
 .conocenosSection article{
-    max-width: 29rem;
+
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
@@ -225,24 +230,35 @@ footer p{
     width: 100%;
     min-height: 25%;
     h2{
+        font-size: clamp(2rem, 2.5vw, 2.5rem) ;
         padding: 1rem;
         text-align: center;
-        font-size: 3.1rem;
     }
 }
 
 .conocenosSection article p{
-    
+    font-size: clamp(1rem, 4vw, 1.5rem) ;
+    line-height: clamp(1.5rem, 4vw, 2rem) ;
     min-height: 75%;
     text-align: justify;
     padding: 1.25rem;
-    font-size: 1.75rem;
 }
+
+
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
 
 
 .tiendaBox{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill,minmax( 20rem,1fr) );
+
     width: 90%;
     gap: 1rem;
     margin: 0px auto;
@@ -610,52 +626,11 @@ select{
 
 
 @media (max-width: 750px) {
-
     body header nav{
         display: none;
     }
-    body main div h1{
-    font-size: 3.625rem;
-    line-height: 3.825rem;
-    font-style: oblique;
-    }
-
-
     footer {
         flex-direction: column;
     }
 
-}
-
-
-
-@media (max-width: 500px) {
-    .conocenosBackground h1{
-        width: 80%;
-    }
-
-    .conocenosSection article div{
-        h2{
-            padding: 0.5rem;
-            text-align: center;
-            font-size: 1.5rem;
-            line-height: 1.5rem;
-        }
-    }
-    
-    .conocenosSection article p{
-        font-size: 1rem;
-        line-height: 1rem;
-        padding-bottom: 4rem;
-    }
-
-    .conocenosSection{
-        margin: 0px auto;
-        width: 96%;
-        flex-wrap: wrap;
-    }
-
-    footer {
-        flex-direction: column;
-    }
 }
