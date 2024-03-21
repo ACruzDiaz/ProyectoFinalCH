@@ -10,6 +10,9 @@
     list-style: none;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
     line-height: 1;
     background-color: #020202;
     font-family: "Nunito Sans", sans-serif;
@@ -176,12 +179,14 @@ footer {
     align-items: center;
     justify-content: space-around;
     background-color: black;
-    
+    margin-top: auto;
+
 }
 footer p{
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1.25rem;
+
 }
 
 
@@ -404,7 +409,7 @@ footer p{
 
 
 .seccionDosGrid{
-    background-image: url("../assets/img/Compromiso.jpg");
+    background-image: url("../assets/img/compromiso.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 50dvh;
