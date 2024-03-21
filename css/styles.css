@@ -9,15 +9,13 @@
     box-sizing: border-box; 
     list-style: none;
 }
-
 body {
     line-height: 1;
     background-color: #020202;
     font-family: "Nunito Sans", sans-serif;
     color: #EDEDED;
+    width: 100dvw;
 }
-
-
 
 /* ESTILOS COLORES Y FUENTES  */
 /* Titulos h1 */
@@ -61,8 +59,8 @@ p,label{
     
 }
 .contenedorPortada{
-
     height: 100%;
+    width: 100%;
     background-image: linear-gradient(rgba(5,7,12,0.08), rgba(5,7,12,0.75)) ,url("../assets/img/portada.png") ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +73,7 @@ p,label{
 .contenedorPortada h1{
     align-self: center;
     padding-left: 3%;
-    font-size: clamp(3.5rem, 5vw, 7rem);
+    font-size: clamp(2.25rem, 5.5vw, 6rem);
 }
 .contenedorPortada div{
     size: auto;
@@ -86,7 +84,6 @@ p,label{
     border-bottom: 0.4rem double #a81516;
     top: -7%;
     padding: 1rem;
-    
 }
 
 .contenedorPortada div p{
@@ -110,7 +107,10 @@ p,label{
 
 
 /* Barra de navegacion */
-nav ul{
+.desktopNav input, .desktopNav label{
+    display: none;
+}
+.desktopNav ul{
     height: 5.625rem;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 3fr;
@@ -118,23 +118,23 @@ nav ul{
     justify-items: center;
     align-items: center;
     background-color: black;
-
+    gap: 1rem;
 }
 
-nav ul li a{
+.desktopNav div ul li a{
     font-family: "Nunito Sans", sans-serif;
-    font-size: 30px;
+    font-size: clamp(1.25rem, 3vw, 1.725rem) ;
     font-weight: 900;
     color: #EDEDED;
     &:visited, &:focus { color:#EDEDED; }
     &:hover, &:active {color:#DA0037;}
 }
-nav ul li a img{
+.desktopNav div ul li a img{
     &:hover{
         filter: drop-shadow(2px 2px 10px #DA0037);
     }
 }
-nav ul li {
+.desktopNav div ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,15 +150,15 @@ nav ul li {
     }
 }
 
-nav ul li a img, footer img {
-        height: 90px;
+.desktopNav div ul li a img, footer img {
+        height: 5.625rem;
 }
 
 .botonCitas{
     padding: 20px 10px;
     background-color:#a81516 ;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0.25rem;
     white-space: nowrap;
 
 }
@@ -276,8 +276,7 @@ footer p{
 
 .tiendaBox{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax( 20rem,1fr) );
-
+    grid-template-columns: repeat(auto-fill,minmax( 18rem,1fr) );
     width: 90%;
     gap: 1rem;
     margin: 0px auto;
@@ -326,10 +325,6 @@ footer p{
 /* -------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 
-main{
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
 .imageBox{
     display: flex;
@@ -353,11 +348,11 @@ main{
 
 .imageBox div div h2{
     align-self: center;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(2.5rem, 3vw, 3rem) ;
-    line-height: clamp(3rem, 3vw, 3rem) ;
+    font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+    line-height: clamp(2.75rem, 3vw, 2.75rem) ;
 }
 
 .imageBox div img{
@@ -366,12 +361,10 @@ main{
 }
 
 
-
-
-
-.serviciosMain{
+.serviciosMain h2{
     padding: 6rem 4rem;
     text-align: center;
+    font-size: 2.5rem;
     background-color: black;
 }
 
@@ -386,57 +379,74 @@ main{
     align-items: center;
     justify-items: center;
     padding-top: 3rem;
-
-
 }
 
 .nuestrosServicios div{
     max-width: 25rem;
     text-align: center;
-    padding: 1rem;
-
+}
+.nuestrosServicios div h3{
+    font-size: 1.5rem;
+    min-width: 75%;
+    margin: 0 auto;
+    padding: 0.25rem 0;
+}
+.nuestrosServicios div p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 75%;
+    margin: 0 auto;
 }
 
 
 
 
 
-.seccion2Background{
-
-    background-image: url("../assets/img/nuestroCompromiso.jpg");
+.seccionDosGrid{
+    background-image: url("../assets/img/Compromiso.jpg");
     background-repeat: no-repeat;
-    background-position: -400px -350px;
     background-size: cover;
-    
     min-height: 50dvh;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     align-items: center;
-    align-content: center;
 }
 
-.seccion2Background h2{
+.seccionDosGrid h2{
+    font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+    line-height: clamp(2.75rem, 3vw, 3rem) ;
     justify-self: self-start;
     text-align: left;
-    width: 50%;
+    width: 60%;
     margin-left: 2rem;
 }
 
-.seccion2Background div{
+
+.seccion2Background{
     display: flex;
     flex-direction: column;
-    background-color: rgba(5,7,12,0.5);
-    padding: 1rem 2rem;
+    background-color: rgba(5, 7, 12, 0.575);
+    justify-content: center;
+    border-radius: .25rem;
+    padding: 1rem 5%;
+    height: 75%;
+
 }
 
-.seccion2Background div h3{
-    width: 66%;
+.seccion2Background h3{
+    padding: 2% 0;
+    font-size: clamp(1.25rem, 3vw, 2rem) ;
+    line-height: clamp(1.75rem, 3vw, 2rem) ;
+    width: 80%;
 }
 
-.seccion2Background div h3, p{
-    text-align: left;
+.seccion2Background p{
+    padding: 2% 0;
+    font-size: clamp(1.25rem, 3vw, 1.25rem) ;
+    line-height: clamp(1.75rem, 3vw, 1.5rem) ;
+    font-weight: 400;
+    width: 95%;
 }
 
 
@@ -457,14 +467,16 @@ main{
 .seccionAgendar{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr ;
+    grid-template-rows: 0.75fr 2fr 0.75fr ;
     padding: 1rem 0rem 2rem 0rem;
     
 }
 .seccionAgendar h2{
     align-self: center;
-    width: 100%;
+    width: 90%;
     margin-left: 2rem;
+    font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+    line-height: clamp(2.75rem, 3vw, 3rem) ;
     
 }
 .formularioCitas{
@@ -595,7 +607,8 @@ main{
 
 }
 .titleCitas{
-    padding: 3rem;
+    padding: 3rem 2rem;
+    font-size: clamp(2.25rem, 3vw, 2.5rem) ;
 }
 .citasMain{
     display: flex;
@@ -606,12 +619,12 @@ main{
     justify-self: end;
     display: flex;
     margin: 1.25rem 0rem;
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: 30px 0px 0px 30px;
     background-color: #EDEDED;
     align-items: center;
     gap: 6%;
-    width: 40dvw;
+    min-width: 40dvw;
     height: 200px;
     
 }
@@ -627,7 +640,7 @@ input[type=reset], [type=submit]{
     color: black;
     border-radius: 0.5rem;
     font-weight: 500;
-    width: 15%;
+    width: 6.5rem;
     border: 2px solid white;
     &:hover{
         border:  2px solid  black;
@@ -638,7 +651,7 @@ input[type=submit]{
     background-color: #a81516;
     color: #EDEDED;
     font-weight: 700;
-    width: 25%;
+    width: 12rem;
     border: 2px solid #a81516;
     &:hover{
         border:  2px solid #EDEDED;
@@ -674,11 +687,92 @@ select{
 
 
 @media (max-width: 750px) {
-    body header nav{
-        display: none;
+
+    .desktopNav div ul li {
+
+        &:last-child{
+            margin-right: 0vw;
+        }
     }
+    .desktopNav .menu{
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+
+    } 
+    .desktopNav ul{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        gap: 2rem;
+        height: 100dvh;
+
+    }
+    .desktopNav label span{
+        font-size: 3rem;
+    }
+    .desktopNav label{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+    
+    nav #toggle:checked ~ .menu{
+        height: 100%;
+    }
+
+
+    .formularioCitas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .enviarDatosBotones{
+        flex-direction: column-reverse;
+        gap: 1.25rem;
+        align-items: center;
+
+    }
+
+    .infoContacto{
+        grid-area: infCont;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+    .seccionDosGrid {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .infoAuto{
+        grid-area: infCont;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    .seccionDosGrid h2{
+        text-align: center;
+        margin-left: 0rem;
+    }
+
+
     footer {
         flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
     }
     .contenedorPortada{
         display: flex;
@@ -688,4 +782,5 @@ select{
     .contenedorPortada h1{
         align-self: self-start;
     }
+
 }
