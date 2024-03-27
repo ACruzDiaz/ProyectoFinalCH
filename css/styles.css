@@ -18,7 +18,9 @@ body {
     font-family: "Nunito Sans", sans-serif;
     color: #EDEDED;
 }
-
+html,body{
+    width: 100%;
+} 
 /* ESTILOS COLORES Y FUENTES  */
 /* Titulos h1 */
 
@@ -70,23 +72,31 @@ p,label{
     background-attachment: fixed;
     display: flex;
     justify-content: space-between;
-    
+    overflow: hidden;
 }
 .contenedorPortada h1{
     align-self: center;
     padding-left: 3%;
     font-size: clamp(2.25rem, 5.5vw, 6rem);
+    position: relative;
+    top: -17%;
 }
 .contenedorPortada div{
     size: auto;
     align-self: flex-end;
     position: relative;
-    border-top: 0.4rem double #a81516;
-    border-left: 0.4rem double #a81516;
-    border-bottom: 0.4rem double #a81516;
-    top: -7%;
+    border-bottom: 0.4rem double #a815150b; 
+    top: -15%;
     padding: 1rem;
+    color: rgba(255, 255, 255, 0.055);
+    transition: all 0.6s;
+    &:hover{
+        border-bottom: 0.4rem double #680d0db6; 
+        color: rgb(255, 255, 255);
+    }
+
 }
+
 
 .contenedorPortada div p{
     font-size: clamp(1.25rem, 2vw, 1.75rem) ;
@@ -109,18 +119,43 @@ p,label{
 
 
 /* Barra de navegacion */
+
+.desktopNav{
+    min-height: 5.625rem;
+
+
+}
 .desktopNav input, .desktopNav label{
     display: none;
+} 
+
+.menu{
+    height: 100%;
+
 }
-.desktopNav ul{
-    height: 5.625rem;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 3fr;
-    grid-template-rows: none;
-    justify-items: center;
+
+.menu ul{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     background-color: black;
-    gap: 1rem;
+    gap: 1.25rem;
+}
+
+.desktopNav div ul li:last-child{
+    margin-left: auto;
+    margin-right: 2.125rem;
+    align-self: center;
+
+    a{
+        &:hover, &:active {color:white;}  
+    }
+}
+
+.desktopNav div ul li {
+    justify-content: center;
+    align-items: center;
 }
 
 .desktopNav div ul li a{
@@ -136,35 +171,19 @@ p,label{
         filter: drop-shadow(2px 2px 10px #DA0037);
     }
 }
-.desktopNav div ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: auto;
-    height: 50px;
-    &:last-child{
-        justify-self: end;
-        margin-right: 4vw;
-        a{
-            &:hover, &:active {color:white;}  
-        }
-    }
-}
+
 
 .desktopNav div ul li a img, footer img {
         height: 5.625rem;
 }
 
 .botonCitas{
-    padding: 20px 10px;
+    padding: 18px 10px;
     background-color:#a81516 ;
     text-align: center;
     border-radius: 0.25rem;
     white-space: nowrap;
-
 }
-
 
 .changeColor{
     filter: invert(1);
@@ -267,7 +286,6 @@ footer p{
     padding: 1.25rem;
 }
 
-
 /* -------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
@@ -280,19 +298,25 @@ footer p{
 
 .tiendaBox{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax( 18rem,1fr) );
-    width: 90%;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr) );
+    width: 85%;
     gap: 1rem;
-    margin: 0px auto;
+    margin: 0px auto; 
     padding-bottom: 32px;
     
+
+
 }
-.tiendaBox div {
+    
+.tiendaContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    }   
+.tiendaBox div{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     &:hover{
-        filter: drop-shadow(1px 1px 12px rgba(235, 235, 235, 0.573));
         p{
             background-image: linear-gradient(rgba(22, 22, 22, 0), #a81515e4);
         }
@@ -373,20 +397,18 @@ footer p{
 }
 
 .nuestrosServicios {
-    display: grid;
-    gap: 2rem;
-    grid-auto-rows:22rem;
-    grid-template-columns:repeat(auto-fill, minmax(20rem,1fr));
-    grid-auto-flow:row ;
-    justify-content: center;
-    align-content: center;
+    display: flex;
+    margin: 2rem;
+    padding-top: 1rem;
+    flex-flow: wrap;
+    flex-grow: 1;
     align-items: center;
-    justify-items: center;
-    padding-top: 3rem;
+    justify-content: center;
 }
 
 .nuestrosServicios div{
     max-width: 25rem;
+    height: 25rem;
     text-align: center;
 }
 .nuestrosServicios div h3{
@@ -691,31 +713,8 @@ select{
 
 
 @media (max-width: 750px) {
-
-    .desktopNav div ul li {
-
-        &:last-child{
-            margin-right: 0vw;
-        }
-    }
-    .desktopNav .menu{
-        width: 100%;
-        height: 0px;
-        overflow: hidden;
-
-    } 
-    .desktopNav ul{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 4rem;
-        gap: 2rem;
-        height: 100dvh;
-
-    }
-    .desktopNav label span{
-        font-size: 3rem;
+    .desktopNav{
+        min-height: 4rem;
     }
     .desktopNav label{
         display: flex;
@@ -726,9 +725,33 @@ select{
         margin-bottom: 1rem;
         cursor: pointer;
     }
-    
+    .desktopNav label span{
+        font-size: 3rem;
+    }
+    .menu{
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+    }
+    .desktopNav div ul li {
+        &:last-child{
+            margin-left: 0px;
+            align-self: center;
+            margin-right: 0vw;
+            margin-top: 1rem;
+        }
+    }
+    .menu ul{
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+        gap: 2rem;
+    }
     nav #toggle:checked ~ .menu{
-        height: 100%;
+        height: 100dvh;
+        width: 100%;
     }
 
 
@@ -785,6 +808,12 @@ select{
     }
     .contenedorPortada h1{
         align-self: self-start;
+        position: relative;
+        top: -5%;
+    }
+    .contenedorPortada div{
+        top: -3%;
+
     }
 
 }
