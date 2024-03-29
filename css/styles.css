@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  font-size: 100%;
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  line-height: 1;
+  background-color: #020202;
+  font-family: "Nunito Sans", sans-serif;
+  color: #EDEDED; }
+
+html, body {
+  width: 100%; }
+
+.titleCitas {
+  padding: 3rem 2rem;
+  font-size: clamp(2.25rem, 3vw, 2.5rem); }
+
+.citasMain {
+  display: flex;
+  flex-direction: column; }
+
+.conocenosBackground {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.08), rgba(5, 7, 12, 0.75)), url("../assets/img/equipo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .conocenosBackground h1 {
+    width: 80%;
+    font-size: clamp(3.5rem, 6vw, 7rem); }
+
+.conocenosDescription {
+  width: 90%;
+  margin: 4rem auto; }
+  .conocenosDescription p {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: clamp(1.75rem, 2vw, 2.25rem); }
+
+.conocenosSection {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+  flex-wrap: wrap; }
+
+.contenedorBackground {
+  background-color: black;
+  height: 100vh;
+  width: 100%; }
+  .contenedorBackground .contenedorPortada {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.08), rgba(5, 7, 12, 0.75)), url("../assets/img/portada.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; }
+    .contenedorBackground .contenedorPortada h1 {
+      align-self: center;
+      padding-left: 3%;
+      font-size: clamp(2.25rem, 5.5vw, 6rem);
+      position: relative;
+      top: -17%; }
+    .contenedorBackground .contenedorPortada div {
+      size: auto;
+      align-self: flex-end;
+      position: relative;
+      border-bottom: 0.4rem double #a815150b;
+      top: -15%;
+      padding: 1rem;
+      color: rgba(255, 255, 255, 0.055);
+      transition: all 0.6s; }
+      .contenedorBackground .contenedorPortada div:hover {
+        border-bottom: 0.4rem double #680d0db6;
+        color: white; }
+      .contenedorBackground .contenedorPortada div p {
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
+        line-height: clamp(1.75rem, 2vw, 2.25rem); }
+
+.imageBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%; }
+  .imageBox div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 1; }
+    .imageBox div div {
+      height: 50dvh;
+      width: clamp(20rem, 24vw, 40rem); }
+      .imageBox div div h2 {
+        align-self: center;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(2.25rem, 3vw, 2.5rem);
+        line-height: clamp(2.75rem, 3vw, 2.75rem); }
+    .imageBox div img {
+      height: 100%;
+      width: 100%; }
+
+.seccionDosGrid {
+  background-image: url("../assets/img/compromiso.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; }
+  .seccionDosGrid h2 {
+    font-size: clamp(2.25rem, 3vw, 2.5rem);
+    line-height: clamp(2.75rem, 3vw, 3rem);
+    justify-self: self-start;
+    text-align: left;
+    width: 60%;
+    margin-left: 2rem; }
+  .seccionDosGrid .seccion2Background {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(5, 7, 12, 0.575);
+    justify-content: center;
+    border-radius: .25rem;
+    padding: 1rem 5%;
+    height: 75%; }
+    .seccionDosGrid .seccion2Background h3 {
+      padding: 2% 0;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: clamp(1.75rem, 3vw, 2rem);
+      width: 80%; }
+    .seccionDosGrid .seccion2Background p {
+      padding: 2% 0;
+      font-size: clamp(1.25rem, 3vw, 1.25rem);
+      line-height: clamp(1.75rem, 3vw, 1.5rem);
+      font-weight: 400;
+      width: 95%; }
+
+.seccionAgendar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 2fr 0.75fr;
+  padding: 1rem 0rem 2rem 0rem; }
+  .seccionAgendar h2 {
+    align-self: center;
+    width: 90%;
+    margin-left: 2rem;
+    font-size: clamp(2.25rem, 3vw, 2.5rem);
+    line-height: clamp(2.75rem, 3vw, 3rem); }
+
+@media (max-width: 750px) {
+  .seccionDosGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center; }
+    .seccionDosGrid h2 {
+      text-align: center;
+      margin-left: 0rem; } }
+
+.serviciosMain {
+  width: 100%;
+  padding-bottom: 1rem;
+  background-color: #343232; }
+  .serviciosMain h2 {
+    background-color: black;
+    padding: 6rem 4rem;
+    text-align: center;
+    font-size: 2.5rem; }
+  .serviciosMain .nuestrosServicios {
+    display: flex;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    flex-flow: wrap;
+    flex-grow: 1;
+    align-items: start;
+    justify-content: center; }
+    .serviciosMain .nuestrosServicios div {
+      max-width: 23rem;
+      height: auto;
+      text-align: center; }
+      .serviciosMain .nuestrosServicios div .changeColor {
+        filter: invert(1);
+        height: 200px; }
+      .serviciosMain .nuestrosServicios div h3 {
+        font-size: 1.5rem;
+        min-width: 75%;
+        margin: 0 auto;
+        padding: 0.25rem 0; }
+      .serviciosMain .nuestrosServicios div p {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 75%;
+        margin: 0 auto; }
+
+.tiendaContainer {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .tiendaContainer .tiendaBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    width: 85%;
+    gap: 1rem;
+    margin: 0px auto;
+    padding-bottom: 32px; }
+    .tiendaContainer .tiendaBox div {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr; }
+      .tiendaContainer .tiendaBox div:hover p {
+        background-image: linear-gradient(rgba(22, 22, 22, 0), #a81515e4); }
+      .tiendaContainer .tiendaBox div img {
+        width: 100%;
+        height: 100%;
+        grid-row: 1;
+        grid-column: 1; }
+      .tiendaContainer .tiendaBox div p {
+        grid-row: 1;
+        grid-column: 1;
+        width: 45%;
+        align-self: self-end;
+        justify-self: self-end;
+        border-top-left-radius: 0.125rem;
+        text-align: center;
+        padding-right: 0.25rem;
+        padding-top: 0.125rem;
+        padding-bottom: .125rem;
+        background-image: linear-gradient(rgba(22, 22, 22, 0), rgba(0, 0, 0, 0.991)); }
+
+.conocenosSection article {
+  max-width: 25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #460303;
+  margin-bottom: 0.5rem; }
+  .conocenosSection article h2 {
+    flex: 25;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .conocenosSection article p {
+    flex: 75;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    line-height: clamp(1.5rem, 4vw, 2rem);
+    text-align: justify;
+    padding: 1.25rem; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  margin-top: auto; }
+  footer p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.25rem; }
+  footer img {
+    height: 5.625rem; }
+
+@media (max-width: 750px) {
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem; } }
+
+.desktopNav {
+  min-height: 5.625rem; }
+  .desktopNav input,
+  .desktopNav label {
+    display: none; }
+  .desktopNav div {
+    height: 100%; }
+    .desktopNav div ul {
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: black;
+      gap: 1.25rem; }
+      .desktopNav div ul li {
+        justify-content: center;
+        align-items: center; }
+        .desktopNav div ul li:last-child {
+          margin-left: auto;
+          margin-right: 2.125rem;
+          align-self: center; }
+          .desktopNav div ul li:last-child a:hover, .desktopNav div ul li:last-child a:active {
+            color: white; }
+        .desktopNav div ul li a {
+          font-family: "Nunito Sans", sans-serif;
+          font-size: clamp(1.25rem, 3vw, 1.725rem);
+          font-weight: 900;
+          color: #EDEDED; }
+          .desktopNav div ul li a:visited, .desktopNav div ul li a:focus {
+            color: #EDEDED; }
+          .desktopNav div ul li a:hover, .desktopNav div ul li a:active {
+            color: #DA0037; }
+          .desktopNav div ul li a img {
+            height: 5.625rem; }
+            .desktopNav div ul li a img:hover {
+              filter: drop-shadow(2px 2px 10px #DA0037); }
+
+@media (max-width: 750px) {
+  .desktopNav {
+    min-height: 4rem; }
+    .desktopNav #toggle:checked ~ .menu {
+      height: 100dvh;
+      width: 100%; }
+    .desktopNav label {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer; }
+      .desktopNav label span {
+        font-size: 3rem; }
+    .desktopNav .menu {
+      width: 100%;
+      height: 0px;
+      overflow: hidden; }
+      .desktopNav .menu ul {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+        gap: 2rem; }
+        .desktopNav .menu ul li:last-child {
+          margin-left: 0px;
+          align-self: center;
+          margin-right: 0px;
+          margin-top: 1rem; } }
+
+.botonCitas {
+  padding: 18px 10px;
+  background-color: #a81516;
+  text-align: center;
+  border-radius: 0.25rem;
+  white-space: nowrap; }
+
+/* SECCION PARA GENERAR CITA */
+.formularioCitas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.4fr;
+  grid-template-areas: "infCont InfAuto" "botones botones";
+  align-items: start;
+  justify-items: center;
+  align-content: start;
+  justify-content: center;
+  gap: 0rem 5%;
+  padding: 0rem 3%;
+  margin: 0rem 3%; }
+  .formularioCitas input[type=text],
+  .formularioCitas [type=number],
+  .formularioCitas [type="email"],
+  .formularioCitas [type="tel"] {
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 8px;
+    background-color: #171717;
+    color: white;
+    width: 80%;
+    margin: 0.5rem;
+    padding: 1rem; }
+    .formularioCitas input[type=text]:focus,
+    .formularioCitas [type=number]:focus,
+    .formularioCitas [type="email"]:focus,
+    .formularioCitas [type="tel"]:focus {
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #5e4fea; }
+  .formularioCitas .infoContacto {
+    grid-area: infCont;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo titulo" "nombre nombreIn" "telefono telefonoIn" "correo correoIn";
+    align-items: center;
+    width: 90%; }
+    .formularioCitas .infoContacto h3 {
+      grid-area: titulo; }
+  .formularioCitas .infoAuto {
+    grid-area: InfAuto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2fr repeat(4, 1fr);
+    grid-template-areas: "titulo titulo" "modelo modeloIn" "motor motorIn" "ano anoIn" "aceite aceiteIn";
+    align-items: center;
+    width: 90%; }
+    .formularioCitas .infoAuto h3 {
+      grid-area: titulo; }
+    .formularioCitas .infoAuto p {
+      padding: 1rem; }
+    .formularioCitas .infoAuto input {
+      justify-self: self-start; }
+    .formularioCitas .infoAuto select {
+      border-radius: 8px;
+      background-color: #EDEDED;
+      color: black;
+      width: 50%;
+      height: 2rem;
+      margin: 0.5rem; }
+  .formularioCitas .enviarDatosBotones {
+    grid-area: botones;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    padding-top: 3rem; }
+    .formularioCitas .enviarDatosBotones input[type=reset],
+    .formularioCitas .enviarDatosBotones [type=submit] {
+      padding: 0.9rem;
+      background-color: #EDEDED;
+      color: black;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      width: 6.5rem;
+      border: 2px solid white; }
+      .formularioCitas .enviarDatosBotones input[type=reset]:hover,
+      .formularioCitas .enviarDatosBotones [type=submit]:hover {
+        border: 2px solid black; }
+    .formularioCitas .enviarDatosBotones input[type=submit] {
+      background-color: #a81516;
+      color: #EDEDED;
+      font-weight: 700;
+      width: 12rem;
+      border: 2px solid #a81516; }
+      .formularioCitas .enviarDatosBotones input[type=submit]:hover {
+        border: 2px solid #EDEDED; }
+
+#nombre {
+  grid-area: nombreIn; }
+
+#numero_tel {
+  grid-area: telefonoIn; }
+
+#correo {
+  grid-area: correoIn; }
+
+.nombreLabel {
+  grid-area: nombre; }
+
+.telefonoLabel {
+  grid-area: telefono; }
+
+.correoLabel {
+  grid-area: correo; }
+
+.infoContacto label {
+  justify-self: self-end;
+  padding: 1rem; }
+
+.infoContacto input {
+  justify-self: self-start; }
+
+#modelo {
+  grid-area: modeloIn; }
+
+#cilindros {
+  grid-area: motorIn; }
+
+#year {
+  grid-area: anoIn; }
+
+.aceiteDiv {
+  grid-area: aceiteIn;
+  justify-self: center; }
+  .aceiteDiv label {
+    margin-right: 2rem; }
+
+.modeloLabel {
+  grid-area: modelo;
+  justify-self: self-end;
+  padding: 1rem; }
+
+.motorLabel {
+  grid-area: motor;
+  justify-self: self-end;
+  padding: 1rem; }
+
+.yearLabel {
+  grid-area: ano;
+  justify-self: self-end;
+  padding: 1rem; }
+
+.aceiteLabel {
+  grid-area: aceite;
+  justify-self: self-end;
+  padding: 1rem; }
+
+@media (max-width: 750px) {
+  .formularioCitas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: end; }
+    .formularioCitas .enviarDatosBotones {
+      flex-direction: column-reverse;
+      gap: 1.25rem;
+      align-items: center; }
+    .formularioCitas .infoContacto {
+      grid-area: infCont;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%; }
+    .formularioCitas .infoAuto {
+      grid-area: infCont;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%; } }
+
+.citasBox {
+  align-self: flex-end;
+  justify-self: end;
+  display: flex;
+  margin: 1.25rem 0rem;
+  padding: 1rem;
+  border-radius: 30px 0px 0px 30px;
+  background-color: #EDEDED;
+  align-items: center;
+  gap: 6%;
+  min-width: 40dvw;
+  height: 200px; }
+
+.citasBox p {
+  color: #171717; }

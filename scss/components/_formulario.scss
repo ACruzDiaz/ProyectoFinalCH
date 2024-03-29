@@ -1,0 +1,256 @@
+/* SECCION PARA GENERAR CITA */
+.formularioCitas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.4fr;
+    grid-template-areas:
+        "infCont InfAuto"
+        "botones botones";
+    align-items: start;
+    justify-items: center;
+    align-content: start;
+    justify-content: center;
+    gap: 0rem 5%;
+    padding: 0rem 3%;
+    margin: 0rem 3%;
+
+
+    input[type=text],
+    [type=number],
+    [type="email"],
+    [type="tel"] {
+        border: none;
+        border-bottom: 2px solid white;
+        border-radius: 8px;
+        background-color: #171717;
+        color: white;
+        width: 80%;
+        margin: 0.5rem;
+        padding: 1rem;
+
+        &:focus {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid rgb(94, 79, 234);
+        }
+
+    }
+
+    .infoContacto {
+        grid-area: infCont;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "nombre nombreIn"
+            "telefono telefonoIn"
+            "correo correoIn";
+        align-items: center;
+        width: 90%;
+
+        h3 {
+            grid-area: titulo;
+        }
+    }
+
+    .infoAuto {
+        grid-area: InfAuto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 2fr repeat(4, 1fr);
+        grid-template-areas:
+            "titulo titulo"
+            "modelo modeloIn"
+            "motor motorIn"
+            "ano anoIn"
+            "aceite aceiteIn";
+        align-items: center;
+        width: 90%;
+
+        h3 {
+            grid-area: titulo;
+        }
+
+        p {
+
+            padding: 1rem;
+        }
+
+        input {
+            justify-self: self-start;
+        }
+
+        select {
+            border-radius: 8px;
+            background-color: #EDEDED;
+            color: black;
+            width: 50%;
+            height: 2rem;
+            margin: 0.5rem;
+        }
+
+
+
+    }
+
+    .enviarDatosBotones {
+        grid-area: botones;
+        width: 100%;
+        display: flex;
+        gap: 2%;
+        justify-content: center;
+        padding-top: 3rem;
+
+        input[type=reset],
+        [type=submit] {
+            padding: 0.9rem;
+            background-color: #EDEDED;
+            color: black;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            width: 6.5rem;
+            border: 2px solid white;
+
+            &:hover {
+                border: 2px solid black;
+            }
+
+        }
+
+        input[type=submit] {
+            background-color: #a81516;
+            color: #EDEDED;
+            font-weight: 700;
+            width: 12rem;
+            border: 2px solid #a81516;
+
+            &:hover {
+                border: 2px solid #EDEDED;
+            }
+
+        }
+    }
+
+
+}
+
+
+
+
+
+#nombre {
+    grid-area: nombreIn;
+}
+
+#numero_tel {
+    grid-area: telefonoIn;
+}
+
+#correo {
+    grid-area: correoIn;
+}
+
+.nombreLabel {
+    grid-area: nombre;
+}
+
+.telefonoLabel {
+    grid-area: telefono;
+}
+
+.correoLabel {
+    grid-area: correo;
+}
+
+.infoContacto label {
+    justify-self: self-end;
+    padding: 1rem;
+}
+
+.infoContacto input {
+    justify-self: self-start;
+}
+
+
+
+#modelo {
+    grid-area: modeloIn;
+}
+
+#cilindros {
+    grid-area: motorIn;
+}
+
+#year {
+    grid-area: anoIn;
+}
+
+.aceiteDiv {
+    grid-area: aceiteIn;
+    justify-self: center;
+
+    label {
+        margin-right: 2rem;
+    }
+}
+
+.modeloLabel {
+    grid-area: modelo;
+    justify-self: self-end;
+    padding: 1rem;
+}
+
+.motorLabel {
+    grid-area: motor;
+    justify-self: self-end;
+    padding: 1rem;
+}
+
+.yearLabel {
+    grid-area: ano;
+    justify-self: self-end;
+    padding: 1rem;
+}
+
+.aceiteLabel {
+    grid-area: aceite;
+    justify-self: self-end;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+    .formularioCitas {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: end;
+        
+        .enviarDatosBotones {
+            flex-direction: column-reverse;
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .infoContacto {
+            grid-area: infCont;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+        }
+        .infoAuto {
+            grid-area: infCont;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+        }
+    
+    }
+}

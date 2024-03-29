@@ -1,0 +1,149 @@
+.contenedorBackground{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    .contenedorPortada{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(5,7,12,0.08), rgba(5,7,12,0.75)) ,url("../assets/img/portada.png") ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        h1{
+            align-self: center;
+            padding-left: 3%;
+            font-size: clamp(2.25rem, 5.5vw, 6rem);
+            position: relative;
+            top: -17%;
+        }
+        div{
+            size: auto;
+            align-self: flex-end;
+            position: relative;
+            border-bottom: 0.4rem double #a815150b; 
+            top: -15%;
+            padding: 1rem;
+            color: rgba(255, 255, 255, 0.055);
+            transition: all 0.6s;
+            &:hover{
+                border-bottom: 0.4rem double #680d0db6; 
+                color: rgb(255, 255, 255);
+            }
+            
+            p{
+                font-size: clamp(1.25rem, 2vw, 1.75rem) ;
+                line-height: clamp(1.75rem, 2vw, 2.25rem) ;
+            }
+        }
+    }
+    
+}
+
+.imageBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        div{
+            height: 50dvh;
+            width: clamp(20rem, 24vw, 40rem);
+            h2{
+                align-self: center;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+                line-height: clamp(2.75rem, 3vw, 2.75rem) ;
+            }
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        
+    }
+}
+
+.seccionDosGrid{
+    background-image: url("../assets/img/compromiso.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    h2{
+        font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+        line-height: clamp(2.75rem, 3vw, 3rem) ;
+        justify-self: self-start;
+        text-align: left;
+        width: 60%;
+        margin-left: 2rem;
+    }
+    .seccion2Background{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(5, 7, 12, 0.575);
+        justify-content: center;
+        border-radius: .25rem;
+        padding: 1rem 5%;
+        height: 75%;
+        h3{
+            padding: 2% 0;
+            font-size: clamp(1.25rem, 3vw, 2rem) ;
+            line-height: clamp(1.75rem, 3vw, 2rem) ;
+            width: 80%;
+        }
+        p{
+            padding: 2% 0;
+            font-size: clamp(1.25rem, 3vw, 1.25rem) ;
+            line-height: clamp(1.75rem, 3vw, 1.5rem) ;
+            font-weight: 400;
+            width: 95%;
+        }
+    }
+}
+
+.seccionAgendar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 2fr 0.75fr ;
+    padding: 1rem 0rem 2rem 0rem;
+    h2{
+        align-self: center;
+        width: 90%;
+        margin-left: 2rem;
+        font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+        line-height: clamp(2.75rem, 3vw, 3rem) ;
+        
+    }
+}
+
+
+
+
+@media (max-width:750px){
+    .seccionDosGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        h2 {
+            text-align: center;
+            margin-left: 0rem;
+        }
+    }
+}
+

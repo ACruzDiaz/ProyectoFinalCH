@@ -1,0 +1,21 @@
+$medidaFuentes:(
+    xxl: clamp(3.5rem, 6vw, 7rem),
+    xl: clamp(2.25rem, 5.5vw, 6rem),
+    l: clamp(2rem, 2.5vw, 2.5rem),
+    m: clamp(1.25rem, 2vw, 1.75rem),
+    s: clamp(1rem, 4vw, 1.5rem)
+);
+$colores:(
+    rojo: #A81516,
+    negro: #020202,
+    blanco: #EDEDED,
+    morado: rgb(94, 79, 234),
+    gris: #171717 
+);
+
+$pesoFuente:(
+    pesado: 1000,
+    medio: 800,
+    ligero: 600
+);
+

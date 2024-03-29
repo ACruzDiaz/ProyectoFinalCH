@@ -1,0 +1,119 @@
+.desktopNav {
+    min-height: 5.625rem;
+
+    input,
+    label {
+        display: none;
+    }
+
+    div {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: black;
+            gap: 1.25rem;
+
+            li {
+                justify-content: center;
+                align-items: center;
+
+                &:last-child {
+                    margin-left: auto;
+                    margin-right: 2.125rem;
+                    align-self: center;
+
+                    a {
+
+                        &:hover,
+                        &:active {
+                            color: white;
+                        }
+                    }
+                }
+
+                a {
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: clamp(1.25rem, 3vw, 1.725rem);
+                    font-weight: 900;
+                    color: #EDEDED;
+
+                    &:visited,
+                    &:focus {
+                        color: #EDEDED;
+                    }
+
+                    &:hover,
+                    &:active {
+                        color: #DA0037;
+                    }
+
+                    img {
+                        height: 5.625rem;
+
+                        &:hover {
+                            filter: drop-shadow(2px 2px 10px #DA0037);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+    
+    .desktopNav {
+        min-height: 4rem;
+        #toggle:checked~.menu {
+            height: 100dvh;
+            width: 100%;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+
+            span {
+                font-size: 3rem;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+
+            ul {
+                height: 100dvh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 10%;
+                gap: 2rem;
+
+                li {
+                    &:last-child {
+                        margin-left: 0px;
+                        align-self: center;
+                        margin-right: 0px;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

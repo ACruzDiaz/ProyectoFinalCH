@@ -1,0 +1,47 @@
+.serviciosMain {
+    width: 100%;
+    padding-bottom: 1rem;
+    background-color: rgb(52, 50, 50);
+    h2 {
+        background-color: rgb(0, 0, 0);
+        padding: 6rem 4rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .nuestrosServicios {
+        display: flex;
+        max-width: 1250px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        flex-flow: wrap;
+        flex-grow: 1;
+        align-items: start;
+        justify-content: center;
+
+        div {
+            max-width: 23rem;
+            height: auto;
+            text-align: center;
+            .changeColor {
+                filter: invert(1);
+                height: 200px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                min-width: 75%;
+                margin: 0 auto;
+                padding: 0.25rem 0;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 500;
+                max-width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

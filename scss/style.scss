@@ -1,0 +1,23 @@
+@import "./utilities/funciones";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+@import "./utilities/variables";
+
+@import "./base/reset";
+@import "./base/fonts";
+
+
+@import "./layout/body-citas";
+@import "./layout/body-conocenos";
+@import "./layout/body-index";
+@import "./layout/body-servicios";
+@import "./layout/body-tienda";
+
+@import "./components/bootstrap";
+@import "./components/cards";
+@import "./components/footer";
+@import "./components/navbar";
+@import "./components/boton";
+@import "./components/formulario";
+@import "./components/banner";
+
