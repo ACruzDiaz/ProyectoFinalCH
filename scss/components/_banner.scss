@@ -8,10 +8,15 @@
     background-color: #EDEDED;
     align-items: center;
     gap: 6%;
-    min-width: 40dvw;
-    height: 200px;
-    
+    max-width: 60%;
+    height: 12.5rem;
+    p{
+        color: #171717;
+        @include textos(s,s,ligero);
+    }
 }
-.citasBox p{
-    color: #171717; 
+@media (max-width:750px){
+    .citasBox{
+        max-width: 97%;
+    }
 }

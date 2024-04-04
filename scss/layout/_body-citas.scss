@@ -1,6 +1,6 @@
 .titleCitas{
     padding: 3rem 2rem;
-    font-size: clamp(2.25rem, 3vw, 2.5rem) ;
+    @include textos (xl,xl,pesado);
 }
 .citasMain{
     display: flex;

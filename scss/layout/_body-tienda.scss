@@ -14,14 +14,20 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-
+            transition: all 0.4s;
+            
             &:hover {
+                scale: 1.08;
+                border: 2px solid rgba(166, 8, 8, 0.546);
                 p {
                     background-image: linear-gradient(rgba(22, 22, 22, 0), #a81515e4);
+                    
+        
                 }
             }
 
             img {
+    
                 width: 100%;
                 height: 100%;
                 grid-row: 1;
@@ -40,6 +46,7 @@
                 padding-top: 0.125rem;
                 padding-bottom: .125rem;
                 background-image: linear-gradient(rgba(22, 22, 22, 0), rgba(0, 0, 0, 0.991));
+                @include textos(s,s,medio);
             }
         }
     }

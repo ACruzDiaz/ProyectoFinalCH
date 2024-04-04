@@ -14,8 +14,12 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            background-color: black;
-            gap: 1.25rem;
+            background-color: rgb(0, 0, 0);
+            background: linear-gradient(-45deg, map-get($colores, negro), map-get($colores, rojo), map-get($colores, gris), map-get($colores, blanco));
+            animation: gradient 15s ease infinite;
+            background-size: 200% 1000%;
+            gap: 2.5rem;
+            padding-left: 2rem;
 
             li {
                 justify-content: center;
@@ -37,8 +41,8 @@
 
                 a {
                     font-family: "Nunito Sans", sans-serif;
-                    font-size: clamp(1.25rem, 3vw, 1.725rem);
-                    font-weight: 900;
+                    @include textos(m,m,medio-pesado);
+
                     color: #EDEDED;
 
                     &:visited,
@@ -48,14 +52,14 @@
 
                     &:hover,
                     &:active {
-                        color: #DA0037;
+                        color: map-get($colores, rojo);
                     }
 
                     img {
                         height: 5.625rem;
 
                         &:hover {
-                            filter: drop-shadow(2px 2px 10px #DA0037);
+                            filter: drop-shadow(2px 2px 10px map-get($colores, rojo));
                         }
                     }
                 }

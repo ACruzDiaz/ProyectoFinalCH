@@ -1,7 +1,7 @@
 .conocenosBackground{
     h1{
         width: 80%;
-        font-size: clamp(3.5rem, 6vw, 7rem);
+        @include textos(xxl,xxl,pesado);
     }
     background-image:linear-gradient(rgba(5,7,12,0.08), rgba(5,7,12,0.75)) , url("../assets/img/equipo.jpg");
     background-repeat: no-repeat;
@@ -18,8 +18,7 @@
     width: 90%;
     margin: 4rem auto;
     p{
-        font-size: clamp(1.25rem, 2vw, 1.75rem) ;
-        line-height: clamp(1.75rem, 2vw, 2.25rem) ;
+        @include textos(s,s,ligero);
     }
 }
 

@@ -1,0 +1,8 @@
+
+@mixin textos($size, $height,$weights)
+{
+    font-size: map-get($map: $medidaFuentes, $key: $size);
+    line-height: map-get($map: $alturaLinea, $key: $height);
+    font-weight: map-get($map: $pesoFuente, $key: $weights );
+    
+}
