@@ -1,12 +1,11 @@
 .serviciosMain {
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: $space-sm;
     background-color:map-get($map: $colores, $key: negro);;
     h2 {
         @include textos(xl,xl,medio-pesado);
         background-color:map-get($map: $colores, $key: negro);;
-        padding: 6rem 2rem;
-        padding-left: 8%;
+        padding: $space-xlg-2;
         text-align: left;
         width: 100%;
     }
@@ -15,8 +14,8 @@
         display: flex;
         max-width: 1250px;
         margin: 0 auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: $space-sm;
+        padding-bottom: $space-sm;
         flex-flow: wrap;
         flex-grow: 1;
         align-items: start;
@@ -39,7 +38,7 @@
                 font-size: 2rem;
                 min-width: 75%;
                 margin: 0 auto;
-                padding: 0.25rem 0;
+                padding: $space-xsm 0;
             }
 
             p {

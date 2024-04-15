@@ -19,7 +19,7 @@
             
             background-size: 500% 1000%;
             gap: 2.5rem;
-            padding-left: 2rem;
+            padding-left: $space-xlg;
 
             li {
                 justify-content: center;
@@ -27,7 +27,7 @@
 
                 &:last-child {
                     margin-left: auto;
-                    margin-right: 2.125rem;
+                    margin-right: $space-xlg;
                     align-self: center;
 
                     a {
@@ -86,9 +86,7 @@
             display: flex;
             align-items: center;
             width: fit-content;
-            margin-top: 1rem;
-            margin-left: 1rem;
-            margin-bottom: 1rem;
+            margin: $space-sm;
             cursor: pointer;
 
             span {
@@ -106,7 +104,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 10%;
+                padding-top: $space-xlg-2;
                 gap: 2rem;
 
                 li {

@@ -9,7 +9,7 @@
     h2 { 
         flex: 25;
         @include textos(l,l,medio);
-        padding: 1.5rem ;
+        padding: $space-md ;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -20,6 +20,6 @@
         flex: 75;
         @include textos(s,s,ligero);
         text-align: justify;
-        padding: .5rem 1.5rem 1.5rem 1.25rem;
+        padding: $space-lg;
     }
 }

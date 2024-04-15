@@ -6,8 +6,8 @@ footer {
     margin-top: auto;
 
     p {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: $space-sm;
+        padding-right: $space-sm;
         @include textos(s,s,medio-pesado);
 
     }
@@ -21,7 +21,7 @@ footer {
     footer {
         flex-direction: column;
         gap: 0.75rem;
-        padding-bottom: 1rem;
+        padding-bottom: $space-sm;
     }
 
 }

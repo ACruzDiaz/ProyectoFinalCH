@@ -16,7 +16,7 @@
 
 .conocenosDescription {
     width: 90%;
-    margin: 4rem auto;
+    margin:$space-xlg-2 auto;
     p{
         @include textos(s,s,ligero);
     }
@@ -24,11 +24,11 @@
 
 .conocenosSection{
     display: flex;
-    gap: 1.5rem;
+    gap: $space-md;
     width: 100%;
     height: auto;
     justify-content: space-around;
-    padding-bottom: 3rem ;
+    padding-bottom: $space-xlg;
     flex-wrap: wrap;
 }
 
