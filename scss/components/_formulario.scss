@@ -112,28 +112,28 @@
         input[type=reset],
         [type=submit] {
             padding: 0.9rem;
-            background-color: #EDEDED;
+            background-color: map-get($map: $colores, $key: blanco);
             color: black;
             border-radius: 0.5rem;
             font-weight: 500;
             width: 6.5rem;
-            border: 2px solid white;
+            border: 2px solid map-get($map: $colores, $key: blanco);
 
             &:hover {
-                border: 2px solid black;
+                border: 2px solid map-get($map: $colores, $key: negro);
             }
 
         }
 
         input[type=submit] {
-            background-color: #a81516;
-            color: #EDEDED;
+            background-color: map-get($map: $colores, $key: rojo);
+            color: map-get($map: $colores, $key: blanco);
             font-weight: 700;
             width: 12rem;
-            border: 2px solid #a81516;
+            border: 2px solid map-get($map: $colores, $key: rojo);
 
             &:hover {
-                border: 2px solid #EDEDED;
+                border: 2px solid map-get($map: $colores, $key: blanco);
             }
 
         }

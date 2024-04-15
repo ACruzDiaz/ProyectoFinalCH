@@ -20,6 +20,54 @@ body {
 html, body {
   width: 100%; }
 
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+nav div ul li:last-child:hover {
+  animation: pulsate-fwd 0.5s ease-in-out infinite both; }
+
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1; } }
+
+.slide-in-blurred-left {
+  animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+@keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    transform: translateX(0) translateY(0); }
+  100% {
+    text-shadow: -1px 1px #000000, -2px 2px #000000, -3px 3px #000000, -4px 4px #000000, -5px 5px #000000, -6px 6px #000000, -7px 7px #000000, -8px 8px #000000;
+    transform: translateX(8px) translateY(-8px); } }
+
+.seccionDosGrid h2 {
+  animation: text-shadow-pop-bl 1s both; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 0%; } }
+
+.desktopNav div ul {
+  animation: gradient 25s ease-in-out infinite; }
+
 .titleCitas {
   padding: 3rem 2rem;
   font-size: clamp(2.25rem, 5.5vw, 6rem);
@@ -64,7 +112,7 @@ html, body {
   flex-wrap: wrap; }
 
 .contenedorBackground {
-  background-color: black;
+  background-color: #020202;
   height: 100vh;
   width: 100%; }
   .contenedorBackground .contenedorPortada {
@@ -98,7 +146,7 @@ html, body {
       color: rgba(255, 255, 255, 0.055);
       transition: all 0.6s; }
       .contenedorBackground .contenedorPortada div:hover {
-        color: white; }
+        color: #EDEDED; }
       .contenedorBackground .contenedorPortada div p {
         font-size: 1.25rem;
         line-height: 1.5rem;
@@ -106,6 +154,7 @@ html, body {
         text-align: right; }
 
 .imageBox {
+  padding: 4rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -210,12 +259,12 @@ html, body {
 .serviciosMain {
   width: 100%;
   padding-bottom: 1rem;
-  background-color: black; }
+  background-color: #020202; }
   .serviciosMain h2 {
     font-size: clamp(2.25rem, 5.5vw, 6rem);
     line-height: clamp(2.25rem, 5.5vw, 6rem);
     font-weight: 900;
-    background-color: black;
+    background-color: #020202;
     padding: 6rem 0;
     padding-left: 10%;
     text-align: left;
@@ -272,9 +321,9 @@ html, body {
       transition: all 0.4s; }
       .tiendaContainer .tiendaBox div:hover {
         scale: 1.08;
-        border: 2px solid rgba(166, 8, 8, 0.546); }
+        border: 2px solid #A81516; }
         .tiendaContainer .tiendaBox div:hover p {
-          background-image: linear-gradient(rgba(22, 22, 22, 0), #a81515e4); }
+          background-image: linear-gradient(rgba(22, 22, 22, 0), #A81516); }
       .tiendaContainer .tiendaBox div img {
         width: 100%;
         height: 100%;
@@ -296,57 +345,12 @@ html, body {
         line-height: 1.5rem;
         font-weight: 800; }
 
-@keyframes pulsate-fwd {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.1); }
-  100% {
-    transform: scale(1); } }
-
-nav div ul li:last-child:hover {
-  animation: pulsate-fwd 0.5s ease-in-out infinite both; }
-
-@keyframes slide-in-blurred-left {
-  0% {
-    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    transform-origin: 100% 50%;
-    filter: blur(40px);
-    opacity: 0; }
-  100% {
-    transform: translateX(0) scaleY(1) scaleX(1);
-    transform-origin: 50% 50%;
-    filter: blur(0);
-    opacity: 1; } }
-
-.slide-in-blurred-left {
-  animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both; }
-
-@keyframes text-shadow-pop-bl {
-  0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
-    transform: translateX(0) translateY(0); }
-  100% {
-    text-shadow: -1px 1px #000000, -2px 2px #000000, -3px 3px #000000, -4px 4px #000000, -5px 5px #000000, -6px 6px #000000, -7px 7px #000000, -8px 8px #000000;
-    transform: translateX(8px) translateY(-8px); } }
-
-.seccionDosGrid h2 {
-  animation: text-shadow-pop-bl 1s both; }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
 .conocenosSection article {
   max-width: 25rem;
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: #460303;
+  background-color: #4d0a0a;
   margin-bottom: 0.5rem; }
   .conocenosSection article h2 {
     flex: 25;
@@ -370,7 +374,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
+  background-color: #020202;
   margin-top: auto; }
   footer p {
     padding-left: 1rem;
@@ -399,10 +403,9 @@ footer {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      background-color: black;
-      background: linear-gradient(-45deg, #020202, #A81516, #171717, #EDEDED);
-      animation: gradient 15s ease infinite;
-      background-size: 200% 1000%;
+      background-color: #020202;
+      background: linear-gradient(-45deg, #020202 50%, #adadad, black);
+      background-size: 500% 1000%;
       gap: 2.5rem;
       padding-left: 2rem; }
       .desktopNav div ul li {
@@ -413,7 +416,7 @@ footer {
           margin-right: 2.125rem;
           align-self: center; }
           .desktopNav div ul li:last-child a:hover, .desktopNav div ul li:last-child a:active {
-            color: white; }
+            color: #EDEDED; }
         .desktopNav div ul li a {
           font-family: "Nunito Sans", sans-serif;
           font-size: clamp(1.25rem, 2vw, 1.75rem);
@@ -464,7 +467,7 @@ footer {
 
 .botonCitas {
   padding: 18px 10px;
-  background-color: #a81516;
+  background-color: #A81516;
   text-align: center;
   border-radius: 0.25rem;
   white-space: nowrap;
@@ -567,16 +570,16 @@ footer {
       border-radius: 0.5rem;
       font-weight: 500;
       width: 6.5rem;
-      border: 2px solid white; }
+      border: 2px solid #EDEDED; }
       .formularioCitas .enviarDatosBotones input[type=reset]:hover,
       .formularioCitas .enviarDatosBotones [type=submit]:hover {
-        border: 2px solid black; }
+        border: 2px solid #020202; }
     .formularioCitas .enviarDatosBotones input[type=submit] {
-      background-color: #a81516;
+      background-color: #A81516;
       color: #EDEDED;
       font-weight: 700;
       width: 12rem;
-      border: 2px solid #a81516; }
+      border: 2px solid #A81516; }
       .formularioCitas .enviarDatosBotones input[type=submit]:hover {
         border: 2px solid #EDEDED; }
 

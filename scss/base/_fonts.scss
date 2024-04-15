@@ -3,9 +3,9 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     line-height: 1;
-    background-color: #020202;
+    background-color: map-get($map: $colores, $key: negro);
     font-family: "Nunito Sans", sans-serif;
-    color: #EDEDED;
+    color: map-get($map: $colores, $key: blanco);
 }
 html,body{
     width: 100%;

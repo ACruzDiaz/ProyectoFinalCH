@@ -18,9 +18,9 @@
             
             &:hover {
                 scale: 1.08;
-                border: 2px solid rgba(166, 8, 8, 0.546);
+                border: 2px solid map-get($map: $colores, $key: rojo);
                 p {
-                    background-image: linear-gradient(rgba(22, 22, 22, 0), #a81515e4);
+                    background-image: linear-gradient(rgba(22, 22, 22, 0),map-get($map: $colores, $key: rojo));
                     
         
                 }

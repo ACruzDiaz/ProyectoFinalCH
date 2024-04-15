@@ -2,7 +2,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: map-get($map: $colores, $key: negro);
     margin-top: auto;
 
     p {

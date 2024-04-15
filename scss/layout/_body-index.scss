@@ -1,5 +1,5 @@
 .contenedorBackground{
-    background-color: black;
+    background-color: map-get($map: $colores, $key: negro);
     height: 100vh;
     width: 100%;
     .contenedorPortada{
@@ -32,7 +32,7 @@
             color: rgba(255, 255, 255, 0.055);
             transition: all 0.6s;
             &:hover{
-                color: rgb(255, 255, 255);
+                color: map-get($map: $colores, $key: blanco);
             }
             
             p{
@@ -45,6 +45,7 @@
 }
 
 .imageBox{
+    padding: 4rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;

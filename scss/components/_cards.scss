@@ -3,7 +3,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(70, 3, 3);
+    background-color: darken(map-get($map: $colores, $key: rojo), 20%);
     margin-bottom: 0.5rem;
 
     h2 { 
