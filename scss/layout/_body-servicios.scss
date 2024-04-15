@@ -5,8 +5,8 @@
     h2 {
         @include textos(xl,xl,medio-pesado);
         background-color:map-get($map: $colores, $key: negro);;
-        padding: 6rem 0;
-        padding-left: 10%;
+        padding: 6rem 2rem;
+        padding-left: 8%;
         text-align: left;
         width: 100%;
     }
