@@ -5,6 +5,9 @@
     label {
         display: none;
     }
+    & > a img {
+        display: none;
+    }
 
     div {
         height: 100%;
@@ -77,12 +80,25 @@
 @media (max-width: 750px) {
     
     .desktopNav {
-        min-height: 4rem;
+        height: 4.9rem;
+        position: relative;
         #toggle:checked~.menu {
             height: 100dvh;
             width: 100%;
         }
+        & > a img {
+            position: absolute;
+            top: 1%;
+            left: 42dvw;
+            display: flex;
+            height: 5.25rem;
+            &:hover {
+                filter: drop-shadow(2px 2px 10px map-get($colores, rojo));
+            }
+        }
         label {
+            position: fixed;
+            z-index: 20;
             display: flex;
             align-items: center;
             width: fit-content;
@@ -94,26 +110,29 @@
             }
         }
 
-        .menu {
+        div.menu {
             width: 100%;
             height: 0px;
             overflow: hidden;
+            position: fixed;
+            z-index: 10;
 
             ul {
                 height: 100dvh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top: $space-xlg-2;
-                gap: 2rem;
+                padding-left: 0;
+                padding-top: 8.5rem;
 
                 li {
-                    &:last-child {
-                        margin-left: 0px;
-                        align-self: center;
-                        margin-right: 0px;
-                        margin-top: 1rem;
+                    &:last-child{
+                            margin-left: 0;
+                            margin-right: 0;
+                            align-self: center;
+        
                     }
+                    
                 }
             }
         }
